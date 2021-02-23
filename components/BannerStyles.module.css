@@ -1,0 +1,72 @@
+.bgImg {
+  /* The image used */
+  background-image: url("../static/images/podcastOne.jpg");
+
+  /* Control the height of the image */
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+  margin: 0px;
+  width: 350px;
+  padding: 10px;
+  background-color: rgba(102, 51, 153, 0.8);
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  text-align: center;
+}
+
+/* Full-width input fields */
+.container input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: rgba(241, 241, 241, 0.8);
+  border-radius: 4px;
+}
+
+.container input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.container h3 {
+  color: rgb(21, 22, 22, 0.8);
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: rgba(80, 185, 218, 0.8);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .container {
+    top: 25%;
+    right: 2%;
+
+    max-width: 180px;
+  }
+}

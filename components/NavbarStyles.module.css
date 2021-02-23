@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  display: block;
+  background-color: rgba(102, 51, 153, 0.8);
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0px 5px;
+}
+.list li {
+  padding: 5px 10px;
+  color: rgba(240, 248, 255, 0.6);
+  border: 1px solid rgba(80, 185, 218, 0.4);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 5px;
+}
+.list li:hover {
+  cursor: pointer;
+}

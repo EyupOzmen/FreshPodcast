@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  margin: 55px auto 5px;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: rgba(80, 185, 218, 1);
+}
+.description {
+  margin: 10px 5px;
+  padding: 5px;
+}
+.descriptionText {
+  color: rgba(80, 185, 218, 0.8);
+  text-align: justify;
+  line-height: 1.5rem;
+  padding: 20px;
+}
+.footer {
+  width: 100%;
+  height: 35px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(102, 51, 153, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #50b9da;
+}
