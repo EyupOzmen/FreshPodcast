@@ -23,4 +23,4 @@ const PodcastView = ({ publisher, thumbnailUrl, title, description }) => (
   </>
 );
 
-export default PodcastView;
+export { PodcastView };

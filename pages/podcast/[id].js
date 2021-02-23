@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { paginate } from "../../utils/paginate";
 
-import EpisodePreview from "../../components/EpisodePreview";
-import PodcastView from "../../components/PodcastView";
-import Pagination from "../../components/Pagination";
-import Layout from "../../components/Layout";
+import {
+  EpisodePreview,
+  PodcastView,
+  Pagination,
+  Layout,
+} from "../../components/index";
 
 import styles from "../../styles/Detail.module.css";
 

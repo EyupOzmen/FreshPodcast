@@ -20,4 +20,4 @@ const EpisodePreview = ({ thumbnailUrl, title, link }) => (
   </>
 );
 
-export default EpisodePreview;
+export { EpisodePreview };

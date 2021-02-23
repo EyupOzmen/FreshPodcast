@@ -25,4 +25,4 @@ const PodcastPreview = ({ publisher, thumbnailUrl, podcastId, title }) => (
   </>
 );
 
-export default PodcastPreview;
+export { PodcastPreview };

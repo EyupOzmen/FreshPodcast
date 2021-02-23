@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import Banner from "../components/Banner";
-import Layout from "../components/Layout";
-import PodcastPreview from "../components/PodcastPreview";
-
-import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
+import {
+  Banner,
+  Layout,
+  PodcastPreview,
+  ScrollButtons,
+} from "../components/index";
 
 import { BASE_URL, options } from "./api/url";
 
@@ -101,37 +101,26 @@ export default function Home({ genres }) {
             </div>
 
             <div className={styles.container}>
-              <div className={styles.arrowLeftBtnContainer}>
-                <button
-                  className={styles.arrowBtn}
-                  onClick={() => handleNav("left")}
-                >
-                  <KeyboardArrowLeftIcon className={styles.leftArrow} />
-                </button>
-              </div>
-              <div ref={navRef} className={styles.scroll}>
-                {bestPodcastsByGenre?.map((podcast) => {
-                  const { publisher, thumbnail, id, title } = podcast;
+              <ScrollButtons
+                onLeftClick={() => handleNav("left")}
+                onRightClick={() => handleNav("right")}
+              >
+                <div ref={navRef} className={styles.scroll}>
+                  {bestPodcastsByGenre?.map((podcast) => {
+                    const { publisher, thumbnail, id, title } = podcast;
 
-                  return (
-                    <PodcastPreview
-                      key={id}
-                      publisher={truncate(publisher)}
-                      thumbnailUrl={thumbnail}
-                      podcastId={id}
-                      title={truncate(title)}
-                    />
-                  );
-                })}
-              </div>
-              <div className={styles.arrowRightBtnContainer}>
-                <button
-                  className={styles.arrowBtn}
-                  onClick={() => handleNav("right")}
-                >
-                  <KeyboardArrowRightIcon className={styles.rightArrow} />
-                </button>
-              </div>
+                    return (
+                      <PodcastPreview
+                        key={id}
+                        publisher={truncate(publisher)}
+                        thumbnailUrl={thumbnail}
+                        podcastId={id}
+                        title={truncate(title)}
+                      />
+                    );
+                  })}
+                </div>
+              </ScrollButtons>
             </div>
           </div>
         ) : (
@@ -140,45 +129,31 @@ export default function Home({ genres }) {
               <p>{`Search result for: "${search}"`}</p>
             </div>
             <div className={styles.container}>
-              <div className={styles.arrowLeftBtnContainer}>
-                <button
-                  className={styles.arrowBtn}
-                  onClick={() => handleNav("left")}
-                >
-                  <KeyboardArrowLeftIcon
-                    color="secondary"
-                    className={styles.leftArrow}
-                  />
-                </button>
-              </div>
-              <div ref={navRef} className={styles.scroll}>
-                {podcasts?.map((podcast) => {
-                  const {
-                    publisher_original,
-                    thumbnail,
-                    id,
-                    title_original,
-                  } = podcast;
+              <ScrollButtons
+                onLeftClick={() => handleNav("left")}
+                onRightClick={() => handleNav("right")}
+              >
+                <div ref={navRef} className={styles.scroll}>
+                  {podcasts?.map((podcast) => {
+                    const {
+                      publisher_original,
+                      thumbnail,
+                      id,
+                      title_original,
+                    } = podcast;
 
-                  return (
-                    <PodcastPreview
-                      key={id}
-                      publisher={truncate(publisher_original)}
-                      thumbnailUrl={thumbnail}
-                      podcastId={id}
-                      title={truncate(title_original)}
-                    />
-                  );
-                })}
-              </div>
-              <div className={styles.arrowRightBtnContainer}>
-                <button
-                  className={styles.arrowBtn}
-                  onClick={() => handleNav("right")}
-                >
-                  <KeyboardArrowRightIcon className={styles.rightArrow} />
-                </button>
-              </div>
+                    return (
+                      <PodcastPreview
+                        key={id}
+                        publisher={truncate(publisher_original)}
+                        thumbnailUrl={thumbnail}
+                        podcastId={id}
+                        title={truncate(title_original)}
+                      />
+                    );
+                  })}
+                </div>
+              </ScrollButtons>
             </div>
           </>
         )}

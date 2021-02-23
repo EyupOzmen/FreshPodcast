@@ -26,4 +26,4 @@ const Banner = ({ value, onChange, onClick, disabled }) => {
   );
 };
 
-export default Banner;
+export { Banner };

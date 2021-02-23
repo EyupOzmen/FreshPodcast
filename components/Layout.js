@@ -1,5 +1,5 @@
 import LayoutStyles from "./LayoutStyles.module.css";
-import Navbar from "./Navbar";
+import { Navbar } from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
@@ -10,4 +10,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export { Layout };

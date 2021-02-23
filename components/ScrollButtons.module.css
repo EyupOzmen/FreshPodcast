@@ -1,0 +1,28 @@
+.arrowLeftBtnContainer {
+  background-color: rgba(80, 185, 218, 0.2);
+  margin-right: 5px;
+  cursor: pointer;
+}
+.arrowRightBtnContainer {
+  background-color: rgba(80, 185, 218, 0.2);
+  margin-left: 5px;
+  cursor: pointer;
+}
+.arrowBtn {
+  background-color: rgba(80, 185, 218, 0.2);
+  border: 1px solid rgb(80, 185, 218, 0.3);
+  border-radius: 4px;
+  outline: none;
+}
+.arrowBtn:hover {
+  cursor: pointer;
+}
+.leftArrow {
+  font-weight: 800;
+  color: rgba(102, 51, 153, 1);
+  cursor: pointer;
+}
+.rightArrow {
+  color: rgba(102, 51, 153, 1);
+  cursor: pointer;
+}
