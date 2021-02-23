@@ -13,4 +13,4 @@ hybrid situtations.
 - Materiul-UI for icons
 - Fully functional components with Hooks.
 
--PLUS, You can see horizontal scrolla and pagination which are very popular in the Web apps.
+-PLUS, You can see horizontal scroll and pagination which are very popular in the Web apps.
